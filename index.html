@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>WeatherApp</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <i class="fas fa-pen" id="edit"></i>
+        <section class="weather">
+          <div class="weather__locations">
+            <h2 class="weather__city" id="city">L</h2>
+            <p class="weather__time" id="time">Tuesday, Dec 09, 2020</p>
+            <p class="weather__temperature" id="temperature"></p>
+            <p class="weather__desc" id="desc"></p>
+          </div>
+          <div class="weather__properties">
+            <p class="weather__property" id="feelsLike"></p>
+            <p class="weather__property" id="humidity"></p>
+            <p class="weather__property" id="tempMax"></p>
+            <p class="weather__property" id="tempMin"></p>
+            <p class="weather__property" id="wind"></p>
+          </div>
+        </section>
+        <div class="forcasts">
+          <div class="forcast">
+            <p class="forcast__day" id="monday">Monday</p>
+            <p class="forcast__temperature" id="forcastMonday">29</p>
+          </div>
+          <div class="forcast">
+            <p class="forcast__day" id="monday">Tuesday</p>
+            <p class="forcast__temperature" id="forcastMonday">29</p>
+          </div>
+          <div class="forcast">
+            <p class="forcast__day" id="monday">Wendsday</p>
+            <p class="forcast__temperature" id="forcastMonday">29</p>
+          </div>
+          <div class="forcast">
+            <p class="forcast__day" id="monday">Thursday</p>
+            <p class="forcast__temperature" id="forcastMonday">29</p>
+          </div>
+          <div class="forcast">
+            <p class="forcast__day" id="monday">Friday</p>
+            <p class="forcast__temperature" id="forcastMonday">29</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modal">
+        <form class="form" id="form">
+          <div class="form__group">
+            <label for="cityName">City:</label> <br />
+            <input
+              type="text"
+              id="cityName"
+              class="form__input"
+              placeholder="eg: Lisbon"
+            />
+          </div>
+          <div class="form__group">
+            <label for="countryName">Country:</label> <br />
+            <input
+              type="text"
+              id="countryName"
+              class="form__input"
+              placeholder="eg: Lisbon"
+            />
+          </div>
+          <input
+            class="form__submit"
+            id="submit"
+            type="submit"
+            value="Change location"
+          />
+        </form>
+      </div>
+    </main>
+    <script src="storage.js"></script>
+    <script src="weather.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

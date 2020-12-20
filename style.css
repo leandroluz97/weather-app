@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  background: #1c3138;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  width: 60vw;
+  height: 80%;
+  color: white;
+  padding: 2em;
+}
+.weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: dashed 1px white;
+  padding-bottom: 3vh;
+}
+.fa-pen {
+  background-color: #2ff2c3;
+  color: #1c3138;
+  padding: 0.5em;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom: 7vh;
+}
+.weather__locations,
+.weather__properties {
+  width: 50%;
+}
+
+.weather__locations {
+  text-align: center;
+}
+.weather__temperature {
+  font-size: 10em;
+  font-weight: 200;
+  color: #2ff2c3;
+}
+.weather__city {
+  font-weight: 500;
+}
+.weather__time {
+  font-weight: 100;
+}
+.weather__desc {
+  font-weight: 300;
+}
+.weather__properties {
+  padding-left: 5vw;
+  border-left: solid 1px #2a434b;
+}
+.weather__property {
+  margin: 2em;
+  font-weight: 100;
+}
+.forcasts {
+  display: flex;
+  justify-content: space-between;
+  padding: 10vh 0 5vh 0;
+}
+.forcast {
+  text-align: center;
+}
+.forcast__day {
+  font-weight: 200;
+  margin-bottom: 4vh;
+}
+.forcast__temperature {
+  font-size: 2em;
+}
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  transition: all 3s ease;
+}
+.form {
+  background-color: #1c3138;
+  color: white;
+  width: 30%;
+  padding: 3em;
+}
+.form__group {
+  margin-bottom: 1em;
+}
+.form__group label {
+  display: inline-block;
+  margin-bottom: 0.3em;
+  font-weight: 300;
+}
+.form__input {
+  width: 100%;
+  padding: 0.5em;
+}
+.form__submit {
+  margin-top: 2em;
+  width: 100%;
+  padding: 0.5em;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  background: #2ff2c3;
+  color: #1c3138;
+  font-weight: 400;
+  border: none;
+}
+.show {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+}
