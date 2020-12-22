@@ -24,8 +24,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: dashed 1px white;
-  padding-bottom: 3vh;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /*
+  border-bottom: solid 3px white;
+  */
+
+  background: #223c44;
 }
 .fa-pen {
   background-color: #2ff2c3;
@@ -35,26 +40,32 @@ body {
   cursor: pointer;
   margin-bottom: 7vh;
 }
+.weather__icon {
+  font-size: 1.3em;
+}
 .weather__locations,
 .weather__properties {
   width: 50%;
+  padding: 2em;
 }
 
 .weather__locations {
   text-align: center;
 }
 .weather__temperature {
-  font-size: 10em;
+  font-size: 7em;
   font-weight: 200;
   color: #2ff2c3;
 }
 .weather__city {
   font-weight: 500;
+  display: inline-block;
 }
 .weather__time {
   font-weight: 100;
 }
 .weather__desc {
+  margin-top: 2em;
   font-weight: 300;
 }
 .weather__properties {
@@ -68,10 +79,14 @@ body {
 .forcasts {
   display: flex;
   justify-content: space-between;
-  padding: 10vh 0 5vh 0;
+  padding: 5vh 5vw 5vh 5vw;
+  background: #1d363d;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .forcast {
   text-align: center;
+  color: #93a9b1;
 }
 .forcast__day {
   font-weight: 200;

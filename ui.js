@@ -21,12 +21,8 @@ class UI {
       weather.main.feels_like
     )}`;
     this.humidity.textContent = `Relative Humidity: ${weather.main.humidity}`;
-    this.tempMax.textContent = `Max temperture: ${Math.round(
-      weather.main.temp_max
-    )}`;
-    this.tempMin.textContent = `Min temperture: ${Math.round(
-      weather.main.temp_min
-    )}`;
+    this.tempMax.textContent = `${Math.round(weather.main.temp_max)}°C `;
+    this.tempMin.textContent = `${Math.round(weather.main.temp_min)}°C -`;
     this.wind.textContent = `Wind: ${weather.wind.speed}km/h`;
   }
 }
