@@ -31,8 +31,15 @@ function getWeather() {
   weather
     .getWeather()
     .then((data) => {
-      console.log(data.responseWeather);
-      ui.showWeather(data.responseWeather);
+      if (data.responseWeather.cod !== 404) {
+        ui.showWeather(data.responseWeather);
+
+        //Save locations on Local Storage
+        storage.setStorage(
+          data.responseWeather.name,
+          data.responseWeather.sys.country
+        );
+      }
     })
     .catch((err) => console.log(err));
 }
@@ -57,15 +64,14 @@ function newLocation(e) {
   const city = document.querySelector('#cityName').value;
   const country = document.querySelector('#countryName').value;
 
-  //change de loctions
-  weather.changeLocation(city, country);
+  if (city !== '' && country !== '') {
+    //change de loctions
+    weather.changeLocation(city, country);
 
-  //Save locations on Local Storage
-  storage.setStorage(city, country);
+    //Print temperature on screen
+    getWeather();
 
-  //Print temperature on screen
-  getWeather();
-
-  //close the modal
-  modal.classList.remove('show');
+    //close the modal
+    modal.classList.remove('show');
+  }
 }
